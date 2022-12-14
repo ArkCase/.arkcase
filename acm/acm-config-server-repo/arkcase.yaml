@@ -2307,7 +2307,7 @@ acm:
   #driverClassName: "org.mariadb.jdbc.Driver"
   driverClassName: "org.postgresql.Driver"
   #url: "jdbc:mysql://acm-arkcase:3306/arkcase?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSsl=true&requireSsl=true&enabledSslProtocolSuites=TLSv1.2&trustCertificateKeyStoreUrl=file:${user.home}/.arkcase/acm/private/arkcase.ts&trustCertificateKeyStorePassword=password"
-  url: "jdbc:postgresql://acm-arkcase:5432/arkcase?ssl=true"
+  url: "jdbc:postgresql://acm-arkcase:5432/arkcase?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSsl=true&requireSsl=true&enabledSslProtocolSuites=TLSv1.2&trustCertificateKeyStoreUrl=file:${user.home}/.arkcase/acm/private/arkcase.ts&trustCertificateKeyStorePassword=password"
   schema: "arkcase"
   username: "arkcase"
   password: "@rM3d1A!"
