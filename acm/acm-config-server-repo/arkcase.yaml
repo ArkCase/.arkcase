@@ -2283,8 +2283,8 @@ schema.autoUpdate: true
 ## jpa configuration
 # database.platform must be an EclipseLink database platform.
 database:
-  platform: "org.eclipse.persistence.platform.database.MySQLPlatform"
-  #platform: "org.eclipse.persistence.platform.database.PostgreSQLPlatform"
+  #platform: "org.eclipse.persistence.platform.database.MySQLPlatform"
+  platform: "org.eclipse.persistence.platform.database.PostgreSQLPlatform"
   platform.showSql: true
   ##properties for other databases to follow.
   encryption_properties: "compress-algo=1, cipher-algo=aes256"
@@ -2292,8 +2292,8 @@ database:
   encryption_enabled: true
   encryption_passphrase: "text"
   #set this property to true if database platform is PostgreSQL
-  encryption_supported: false
-  #encryption_supported: true 
+  #encryption_supported: false
+  encryption_supported: true 
 eclipselink.logging:
   level: "FINEST"
   logger: "org.eclipse.persistence.logging.slf4j.Slf4jSessionLogger"
@@ -2304,10 +2304,10 @@ eclipselink.logging:
 jpa.model.packages: "com.armedia.**"
 ##postgresql
 acm:
-  driverClassName: "org.mariadb.jdbc.Driver"
-  #driverClassName: "org.postgresql.Driver"
-  url: "jdbc:mysql://acm-arkcase:3306/arkcase?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSsl=true&requireSsl=true&enabledSslProtocolSuites=TLSv1.2&trustCertificateKeyStoreUrl=file:${user.home}/.arkcase/acm/private/arkcase.ts&trustCertificateKeyStorePassword=password"
-  #url: "jdbc:postgresql://acm-postgres:5432/arkcase?ssl=true"
+  #driverClassName: "org.mariadb.jdbc.Driver"
+  driverClassName: "org.postgresql.Driver"
+  #url: "jdbc:mysql://acm-arkcase:3306/arkcase?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSsl=true&requireSsl=true&enabledSslProtocolSuites=TLSv1.2&trustCertificateKeyStoreUrl=file:${user.home}/.arkcase/acm/private/arkcase.ts&trustCertificateKeyStorePassword=password"
+  url: "jdbc:postgresql://acm-arkcase:5432/arkcase?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSsl=true&requireSsl=true&enabledSslProtocolSuites=TLSv1.2&trustCertificateKeyStoreUrl=file:${user.home}/.arkcase/acm/private/arkcase.ts&trustCertificateKeyStorePassword=password"
   schema: "arkcase"
   username: "arkcase"
   password: "@rM3d1A!"
@@ -2330,8 +2330,8 @@ acm:
   ## Threshold value for SlowQueryReport is in 'milliseconds'
   jdbcInterceptors: "SlowQueryReport(threshold=5000)"
 ##activiti engine database properties
-activiti.db.type: mysql
-#activiti.db.type: postgres
+#activiti.db.type: mysql
+activiti.db.type: postgres
 ################### Document Repository Plugin Configuration (documentRepositoryPlugin.properties) ###################
 docRepo.plugin:
   search.tree:
